@@ -108,6 +108,7 @@ body {
 .navigation {
   padding-top: 10rem;
   padding-bottom: 20rem;
+  height: 100vh;
   .main__title {
     max-width: 80rem;
     width: 100%;
@@ -187,13 +188,15 @@ body {
   .we__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 1rem;
     max-width: 100%;
     .we__item {
       max-width: 22rem;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
       .we__logo-wrapper {
         width: 300px;
         height: 300px;
@@ -429,6 +432,7 @@ body {
         align-self: center;
         font-family: 'Choice Studio', sans-serif;
         font-size: 2rem;
+        text-align: center;
         align-content: center;
         line-height: 1.3333333333333333;
         font-weight: 500;
@@ -825,20 +829,20 @@ body {
   @return map-get($breakpoints, $bp);
 }
 $xs-bp: 320px;
-$sm-bp: 600px;
-$md-bp: 900px;
-$lg-bp: 1200px;
+$sm-bp: 480px;
+$md-bp: 769px;
+$lg-bp: 1280px;
 $xl-bp: 1800px;
 $breakpoints: (
         na: 0px,
   // For BS grid
         xs: 320px,
   // Smartphone
-        sm: 600px,
+        sm: 480px,
   // Tablets
-        md: 900px,
+        md: 769px,
   // Tablets Landscape and small desktops
-        lg: 1200px,
+        lg: 1280px,
   // Desktops
         xl: 1800px,
   // Large Desktop
@@ -881,7 +885,13 @@ $container-sizes: (
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
+  .navigation{
+    .navigation__image{
+      width: 70%;
+      margin-right: 20%;
+    }
+  }
   .work__item {
     color: #000;
     text-decoration: none;
@@ -899,7 +909,63 @@ $container-sizes: (
     }
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+  .navigation{
+    .navigation__image{
+      width: 90%;
+      display: flex;
+      justify-content: end;
+      position: absolute;
+      margin-left:20%;
+      z-index: -1;
+      img{
+        width: 1300px;
+      }
+    }
+    .main__title{
+      font-size: 5rem;
+      max-width: 40rem;
+    }
+  }
+
+  .we .we__list .we__item .we__logo-wrapper{
+    width: 200px;
+    height: 200px;
+    .we__logo{
+    }
+  }
+  .service{
+    .service__section{
+      .right{
+        width: 65%;
+      }
+      .left{
+        height: 100vh;
+      }
+    }
+    .service__text-wrapper .service__text{
+    font-size: 2rem;
+    }
+   .service__list{
+     gap: 10px;
+     .service__item{
+       padding: 3rem 1.5rem 1rem 1.5rem;
+     }
+   }
+  }
+
+  .contact .form__wrapper .form{
+    width: 70%;
+  }
+  .footer .footer__wrapper .footer__block-one{
+    .footer__address{
+      font-size: 1.5rem;
+    }
+    .footer__contacts{
+      font-size: 1.5rem;
+    }
+  }
+
   .work__item {
     color: #000;
     text-decoration: none;
@@ -933,14 +999,9 @@ $container-sizes: (
     font-size: 0.875rem;
     line-height: 1.7142857142857142;
   }
-  .navigation .main__title {
-    max-width: 32rem;
-    margin-bottom: 2.25rem;
-    font-size: 3rem;
-  }
 
 }
-@media screen and (min-width: 600px) and (max-width: 992px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   .header {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -958,7 +1019,7 @@ $container-sizes: (
   .navigation .main__title {
     max-width: 32rem;
     margin-bottom: 2.25rem;
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 1.1875;
   }
 
@@ -973,6 +1034,9 @@ $container-sizes: (
     grid-template-columns: 1fr;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
+  }
+  .works .links .links__list .links__item{
+    margin-right: 1rem;
   }
 
   .service .service__list {
@@ -1047,7 +1111,7 @@ $container-sizes: (
     }
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 479px) {
   .header {
     padding-top: 1rem;
     padding-bottom: 1rem;
