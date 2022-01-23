@@ -1214,66 +1214,78 @@ $container-sizes: (
     }
   }
 
-  .we .we__list .we__item{
-    .we__logo-wrapper {
-      width: 100px;
-      height: 100px;
-    }
-    .we__description-wrapper{
-      font-size: 1rem;
-      margin-top: 0;
-      .we__subtitle{
-        font-size: 1.5rem;
+  .we .we__list{
+    flex-direction: column;
+    .we__item {
+      padding-bottom: 2.5rem;
+      .we__logo-wrapper {
+        width: 150px;
+        height: 150px;
       }
-    }
-  }
-
-  .service{
-    min-height: max-content;
-    .service__section{
-      .right{
-        width: 50%;
-        height: min-content;
-      }
-      .left{
-        height: 100vh;
-        width: 45%;
-        .service__title{
+      .we__description-wrapper {
+        font-size: 1rem;
+        margin-top: 0;
+        .we__subtitle {
           font-size: 2rem;
         }
       }
     }
-    .service__text-wrapper .service__text{
+  }
+
+  .service {
+    .service__section {
+      .right {
+        width: 40%;
+        height: min-content;
+      }
+
+      .left {
+        height: 100vh;
+        width: 50%;
+
+        .service__title {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .service__text-wrapper .service__text {
       font-size: 1.5rem;
     }
-    .service__list{
+
+    .service__list {
       gap: 10px;
       grid-row-gap: 1rem;
-      margin-top: 2.5rem;
+      margin-top: 2rem;
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-      padding-bottom: 2.5rem;
-      .service__item{
-        padding: 3rem 1.5rem 1rem 1.5rem;
-        .service__subtitle{
-          font-size: 1.5rem;
+      padding-bottom: 2rem;
+
+      .service__item {
+        padding: 2rem 1.5rem 1rem 1.5rem;
+
+        .service__subtitle {
+          font-size: 1.25rem;
         }
       }
     }
   }
-  .service .service__list {
-    margin-top: 2.5rem;
-    grid-row-gap: 2rem;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    padding-bottom: 2.5rem;
-  }
+
+
   .footer {
     padding-bottom: 10rem;
     padding-top: 1rem;
     background-color: #000;
     color: #fff;
     width: 100%;
+    .footer__wrapper .footer__block-one{
+      .footer__address{
+        font-size: 1.5rem;
+      }
+      .footer__contacts{
+        font-size: 1.5rem;
+      }
+    }
   }
   .footer .footer__wrapper .footer__block-one {
     //-webkit-box-align: start;
@@ -1329,6 +1341,8 @@ $container-sizes: (
       margin-top: 0;
 
     }
+    .form__btn-wrapper{
+      justify-content: flex-end;
+    }
   }
-
 }
